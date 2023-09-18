@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: apache-tjth-co
+spec:
+  secretName: apache-tjth-co
+  issuerRef:
+    name: letsencrypt-cloudflare
+    kind: Issuer
+  commonName: 'apache.tjth.co'
+  dnsNames:
+  - "apache.tjth.co"
